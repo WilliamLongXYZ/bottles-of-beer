@@ -10,20 +10,23 @@ def print_verse(verse, st=2):
     print(verse)
     time.sleep(st)
 
+def show_stanza(bottles, word, it):
+    print_verse(f"{bottles} {word} of beer on the wall")
+    print_verse(f"{bottles} {word} of beer")
+    print_verse(f"Take {it} down, pass it around")
+    print_verse(f"{bottles-1} {word} of beer on the wall", 3)
+    print()
+    return bottles-1
+
 def main():
     bottles = 99
+    word = "bottle"
+    it = "it"
     while bottles:
-        word = "bottle"
-        it = "it"
         if bottles != 1:
             word += "s"
             it = "one"
-        print_verse(f"{bottles} {word} of beer on the wall")
-        print_verse(f"{bottles} {word} of beer")
-        print_verse(f"Take {it} down, pass it around")
-        bottles -= 1
-        print_verse(f"{bottles} {word} of beer on the wall", 3)
-        print()
+        bottles = show_stanza(bottles, word, it)
 
 if __name__ == "__main__":
     main()
