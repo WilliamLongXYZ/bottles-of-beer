@@ -20,12 +20,12 @@ def show_stanza(bottles, word, it):
 
 def main():
     bottles = 99
-    word = "bottle"
-    it = "it"
+    word = "bottles"
+    it = "one"
     while bottles:
-        if bottles != 1:
-            word += "s"
-            it = "one"
+        if bottles == 1:
+            word = "bottle"
+            it = "it"
         bottles = show_stanza(bottles, word, it)
 
 if __name__ == "__main__":
