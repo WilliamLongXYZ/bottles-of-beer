@@ -5,6 +5,11 @@ Reformatted and changed by William Long <williamlong0726@gmail.com
 '''
 import time
 
+
+def print_verse(verse, st=2):
+    print(verse)
+    time.sleep(st)
+
 def main():
     bottles = 99
     while bottles:
@@ -13,15 +18,11 @@ def main():
         if bottles != 1:
             word += "s"
             it = "one"
-        print(f"{bottles} {word} of beer on the wall")
-        time.sleep(2)
-        print(f"{bottles} {word} of beer")
-        time.sleep(2)
-        print(f"Take {it} down, pass it around")
+        print_verse(f"{bottles} {word} of beer on the wall")
+        print_verse(f"{bottles} {word} of beer")
+        print_verse(f"Take {it} down, pass it around")
         bottles -= 1
-        time.sleep(2)
-        print(f"{bottles} {word} of beer on the wall")
-        time.sleep(3)
+        print_verse(f"{bottles} {word} of beer on the wall", 3)
         print()
 
 if __name__ == "__main__":
