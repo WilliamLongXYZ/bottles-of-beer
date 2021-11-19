@@ -1,7 +1,7 @@
 '''
 Bottles of Beer on the Wall
 Inspired by The Big Book of Small Python Projects
-Reformatted and changed by William Long <williamlong0726@gmail.com
+Reformatted and changed by William Long <williamlong0726@gmail.com>
 '''
 import time
 
@@ -9,7 +9,7 @@ import time
 def print_verse(verse, st=2):
     if "0" in verse: verse = "No more bottles of beer on the wall"
     print(verse)
-    #time.sleep(st)
+    time.sleep(st)
 
 def show_stanza(bottles, word, it):
     print_verse(f"{bottles} {word} of beer on the wall")
